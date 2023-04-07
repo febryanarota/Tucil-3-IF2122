@@ -15,11 +15,10 @@ class Graph:
         self.totalNode = int(read.readline())
 
         # Read the nodes and append them to the nodeList
-        id = 1
         for i in range(self.totalNode):
             line = read.readline().split()
             self.nodeList.append(Node(line[0], float(line[1]), float(line[2])))
-            id += 1
+         
         
         # Read the adjacency matrix
         for i in range(self.totalNode):
@@ -28,7 +27,7 @@ class Graph:
                 if(line[j] == "1"):
                     self.nodeList[i].neighbors.append(self.nodeList[j])
     
-# test = Graph("./testtest.txt")
-# test.readGraph()
-# for node in test.nodeList:
-#     node.displayNodeInfo()
+    def findNodeByName(self, nodeName):
+        for n in self.nodeList:
+            if nodeName == n.name:
+                return n
