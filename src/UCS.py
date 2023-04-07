@@ -4,6 +4,7 @@ from prioqueue import *
 
 def UCS(startName, goalName, graph):
     startNode = graph.findNodeByName(startName)
+    startNode.path = [startNode]
     goalNode = graph.findNodeByName(goalName)
 
     route = PrioQueue()
