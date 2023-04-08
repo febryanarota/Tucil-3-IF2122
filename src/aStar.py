@@ -101,8 +101,8 @@ def displayMap(graph, start, goal, result):
             else:
                 folium.PolyLine(locations=[[node.x, node.y], [neighbor.x, neighbor.y]], color="blue", weight=2.5, opacity=1, popup= str(distance)).add_to(m)
         
-    m.save('map.html')
-    webbrowser.open_new_tab('map.html')
+    m.save('map2.html')
+    webbrowser.open_new_tab('map2.html')
 
                 
             

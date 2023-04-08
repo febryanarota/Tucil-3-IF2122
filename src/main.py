@@ -1,6 +1,8 @@
 from aStar import *
 from graph import *
 from node import *
+from UCS import *
+from prioqueue import *
 import os
 
 
@@ -41,11 +43,13 @@ while choice != "1" and choice != "2":
 
 if choice == "1":
     result = aStar(start, goal, graph)
-    print("\nHasil: " + result.name)
-    print("Jarak: " + str(round(result.gn,2)) + " km\n")
-    visualize = input("Tampilkan visualisasi? (y/n): ")
-    if visualize == "y" or visualize == "Y":
-        displayGraph(graph, result)
-        displayMap(graph, start, goal, result)
+elif choice == "2":
+    result = UCS(start, goal, graph)
+print("\nHasil: " + result.name)
+print("Jarak: " + str(round(result.gn,2)) + " km\n")
+visualize = input("Tampilkan visualisasi? (y/n): ")
+if visualize == "y" or visualize == "Y":
+    displayGraph(graph, result)
+    displayMap(graph, start, goal, result)
 
 
