@@ -41,7 +41,7 @@ def aStar(startName, goalName, graph):
             # Create new node with new path
             hn = neighbor.calculateHaversine(goal)
             gn = current.gn +   current.calculateHaversine(neighbor)
-            fn = current.fn + hn + gn
+            fn = hn + gn
 
             # Update the attributes of the new node
             newNode = Node(current.name + " -> " + neighbor.name, neighbor.x, neighbor.y)
@@ -58,9 +58,9 @@ def aStar(startName, goalName, graph):
             if hn == 0:
                 return newNode
         
-        # Sort the new node list and add to queue
-        listNewNode.sort(key=lambda x: x.fn)
+        # add the new node list to the queue and sort it based on fn
         queue = listNewNode + queue
+        queue.sort(key=lambda x: x.fn)
 
 def displayGraph(graph, result = Node()):
     # Display graph
