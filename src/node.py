@@ -12,9 +12,6 @@ class Node:
         self.path = []
         self.neighbors = []
 
-    def __lt__ (self, other):
-        return self.fn < other.fn
-
     def getDistance(self, other):
         return sqrt(pow(self.x - other.x, 2) + pow(self.y - other.y, 2))
 
@@ -34,21 +31,12 @@ class Node:
         a = (sin(latDiff / 2)**2) + (cos(lat1) * cos(lat2) * sin(longDiff / 2)**2)
         c = 2 * asin(sqrt(a))   
         return(c* earthRadius)
-    
-    def updateNeighbors(self, neighbors, removeNeighbor):
-        # Update the neighbors of the node
-        self.neighbors = neighbors
-        self.neighbors.remove(removeNeighbor)
 
     def setValue(self, gn, hn, fn):
         # Update the value of the node
         self.gn = gn
         self.hn = hn
         self.fn = fn
-
-    def updatePath(self, path):
-        # Update the path of the node
-        self.path = path
 
     def displayNodeInfo(self):
         # Display the node information

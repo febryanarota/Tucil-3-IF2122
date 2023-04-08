@@ -6,10 +6,10 @@ import os
 
 filename = "./test/" + input("Masukkan nama file: ")
 while not os.path.exists(filename):
-    print("File tidak ditemukan. Silakan masukkan nama file yang benar")
+    print("File tidak ditemukan. Silakan masukkan nama file yang benar\n")
     filename = "./test/" + input("Masukkan nama file: ")
 
-print("\n Menampilkan graph...")
+print("\nMenampilkan graph...")
 print("*Close graph untuk melanjutkan...")
 graph = Graph(filename)
 graph.readGraph()
@@ -24,13 +24,15 @@ for node in graph.nodeList:
 print("===================")
 
 
-start = input("Masukkan node awal: ")
-while not isNodeValid(start, graph):
+inputNode = int(input("Masukkan nomor node awal: "))
+while inputNode < 1 or inputNode > graph.totalNode:
     start = input("Node tidak ditemukan. Silakan masukkan node yang benar: ")
+start = graph.nodeList[inputNode-1].name
 
-goal = input("Masukkan node tujuan: ")
-while not isNodeValid(goal, graph):
+inputNode = int(input("Masukkan nomor node tujuan: "))
+while inputNode < 1 or inputNode > graph.totalNode:
     goal = input("Node tidak ditemukan. Silakan masukkan node yang benar: ")
+goal = graph.nodeList[inputNode-1].name
 
 print("\n1. A* Search \n2. UCS Search")
 choice = input("Masukkan pilihan: ")
@@ -40,9 +42,10 @@ while choice != "1" and choice != "2":
 if choice == "1":
     result = aStar(start, goal, graph)
     print("\nHasil: " + result.name)
+    print("Jarak: " + str(round(result.gn,2)) + " km\n")
     visualize = input("Tampilkan visualisasi? (y/n): ")
     if visualize == "y" or visualize == "Y":
         displayGraph(graph, result)
-
+        displayMap(graph, start, goal, result)
 
 
