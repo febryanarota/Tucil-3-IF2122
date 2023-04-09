@@ -81,7 +81,7 @@ def displayGraph(graph, result = Node()):
     nx.draw_networkx_edge_labels(g, pos, edge_labels = edge_weight)
     plt.show()
 
-def displayMap(graph, start, goal, result):
+def displayMap(graph, start, goal, result, name):
     # Display map
     startNode = graph.findNodeByName(start)
     goalNode = graph.findNodeByName(goal)
@@ -100,9 +100,9 @@ def displayMap(graph, start, goal, result):
                 folium.PolyLine(locations=[[node.x, node.y], [neighbor.x, neighbor.y]], color="red", weight=2.5, opacity=1, popup= str(distance)).add_to(m)
             else:
                 folium.PolyLine(locations=[[node.x, node.y], [neighbor.x, neighbor.y]], color="blue", weight=2.5, opacity=1, popup= str(distance)).add_to(m)
-        
-    m.save('map2.html')
-    webbrowser.open_new_tab('map2.html')
+    name += ".html"
+    m.save(name)
+    webbrowser.open_new_tab(name)
 
                 
             

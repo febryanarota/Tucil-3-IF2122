@@ -28,12 +28,12 @@ print("===================")
 
 inputNode = int(input("Masukkan nomor node awal: "))
 while inputNode < 1 or inputNode > graph.totalNode:
-    start = input("Node tidak ditemukan. Silakan masukkan node yang benar: ")
+    inputNode = int(input("Node tidak ditemukan. Silakan masukkan node yang benar: "))
 start = graph.nodeList[inputNode-1].name
 
 inputNode = int(input("Masukkan nomor node tujuan: "))
 while inputNode < 1 or inputNode > graph.totalNode:
-    goal = input("Node tidak ditemukan. Silakan masukkan node yang benar: ")
+    inputNode = int(input("Node tidak ditemukan. Silakan masukkan node yang benar: "))
 goal = graph.nodeList[inputNode-1].name
 
 print("\n1. A* Search \n2. UCS Search")
@@ -49,7 +49,10 @@ print("\nHasil: " + result.name)
 print("Jarak: " + str(round(result.gn,2)) + " km\n")
 visualize = input("Tampilkan visualisasi? (y/n): ")
 if visualize == "y" or visualize == "Y":
+    name = " "
+    while " " in name:
+        name = input("Masukkan nama arsip peta yang ingin disimpan (tanpa format dan spasi): ")
     displayGraph(graph, result)
-    displayMap(graph, start, goal, result)
+    displayMap(graph, start, goal, result, name)
 
 
