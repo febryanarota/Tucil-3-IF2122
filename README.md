@@ -40,7 +40,7 @@ Python versi 3.9.64 atau lebih baru serta extension matplotlib, networkx, plotly
 `pip install plotly` <br />
 `pip install folium` <br />
 ## Cara Menjalankan Program
-1. Pada directory file main, jalankan `python -u <directory folder main>/main.py`
+1. Pada directory file main, jalankan `python -u <directory folder main>/src/main.py`
 2. Selain cara tersebut, python dapat dijalankan langsung dengan melalui arsip `main.py` secara langsung.
 ## Dibuat oleh
 <br /> Nama: Febryan Arota Hia
