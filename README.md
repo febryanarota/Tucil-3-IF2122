@@ -10,7 +10,8 @@ Terpendek".
 * [Cara Menjalankan Program](#cara-menjalankan-program)
 * [Dibuat Oleh](#dibuat-oleh)
 ## Deskripsi Singkat Program
-
+  Algoritma UCS (Uniform cost search) dan A* (atau A star) dapat digunakan untuk menentukan lintasan terpendek dari suatu titik ke titik lain. Lintasan terpendek ini dibentuk dari sebuah peta ruas - ruas jalan yang dibentuk menjadi sebuah graf dengan membentuk simpul - simpul sebagai simpangan atau ujung jalan. Graf yang merepresentasikan peta tersebut kemudian diukur lintasan terpendek dari simpul awal hingga simpul akhir atau tujuan. Hasil lintasan terpendek ini kemudian divisualisaskan dan dalam program ini menggunakan folium pada bahasa Python.
+lintasan terpendek dari suatu titik ke titik lain
 ## Sistematika File
 ```bash
 ├─── doc
