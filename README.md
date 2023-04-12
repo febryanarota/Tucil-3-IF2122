@@ -6,7 +6,7 @@ Terpendek".
 * [Deskripsi Singkat Program](#deskripsi-singkat-program)
 * [Sistematika File](#sistematika-file)
 * [Requirements](#requirements)
-* [Cara Kompilasi Program](#cara-kompilasi-program)
+* [Ketentuan Menjalankan Program](#ketentuan-menjalankan-program)
 * [Cara Menjalankan Program](#cara-menjalankan-program)
 * [Dibuat Oleh](#dibuat-oleh)
 ## Deskripsi Singkat Program
@@ -32,7 +32,7 @@ lintasan terpendek dari suatu titik ke titik lain
 ```
 ## Requirements
 Python versi 3.9.64 atau lebih baru serta extension matplotlib, networkx, plotly, dan folium.
-## Cara Kompilasi Program
+## Ketentuan Menjalankan Program
 1. Pastikan sudah ada Python pada mesin eksekusi sesuai requirement yang ada.
 2. Ekstensi matplotlib dapat diunduh dengan cara mengeksekusi perintah berikut pada terminal: <br /> 
 `pip install matplotlib` <br />
@@ -40,8 +40,10 @@ Python versi 3.9.64 atau lebih baru serta extension matplotlib, networkx, plotly
 `pip install plotly` <br />
 `pip install folium` <br />
 ## Cara Menjalankan Program
-1. Pada directory file main, jalankan `python -u <directory folder main>/src/main.py`
-2. Selain cara tersebut, python dapat dijalankan langsung dengan melalui arsip `main.py` secara langsung.
+1. Pastikan sudah berada di dalam directory folder program ini dengan menjalankan pada terminal `cd Tucil3-IF2122` <br />
+2. Pada directory tersebut, jalankan `python -u <directory folder main>/src/main.py` atau `python -u src/main.py`
+3. Selain cara tersebut, python dapat dijalankan langsung dengan melalui arsip `main.py` secara langsung. <br />
+   Pastikan 
 ## Dibuat oleh
 <br /> Nama: Febryan Arota Hia
 <br /> NIM: 13521120
