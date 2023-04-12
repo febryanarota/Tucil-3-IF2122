@@ -15,7 +15,7 @@ lintasan terpendek dari suatu titik ke titik lain
 ## Sistematika File
 ```bash
 ├─── doc
-|   ├─── Tucil3_13521120_13521145.pdf
+│   ├─── Tucil3_13521120_13521145.pdf
 ├─── src
 │   ├─── aStar.py
 │   ├─── graph.py
